@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genesis - Proyecto Migrado a React</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0D2D69 0%, #1a3a8a 100%);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      max-width: 700px;
+      padding: 40px;
+      text-align: center;
+    }
+    h1 {
+      color: #0D2D69;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+    .subtitle {
+      color: #F39A16;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .status {
+      background: #ecfdf5;
+      border: 2px solid #10b981;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    .status-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+    .status-item:last-child { margin-bottom: 0; }
+    .status-item .check {
+      color: #10b981;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .button-group {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      flex: 1;
+      min-width: 150px;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-primary {
+      background: #F39A16;
+      color: white;
+    }
+    .btn-primary:hover {
+      background: #d97706;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(243, 154, 22, 0.3);
+    }
+    .btn-secondary {
+      background: #0D2D69;
+      color: white;
+    }
+    .btn-secondary:hover {
+      background: #0a1f4a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(13, 45, 105, 0.3);
+    }
+    .info-box {
+      background: #f3f4ff;
+      border-left: 4px solid #0D2D69;
+      padding: 20px;
+      text-align: left;
+      margin-bottom: 20px;
+      border-radius: 4px;
+    }
+    .info-box h3 {
+      color: #0D2D69;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    .info-box p {
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .steps {
+      text-align: left;
+      background: #fafaf9;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .steps h3 {
+      color: #0D2D69;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+    .steps ol {
+      margin-left: 20px;
+    }
+    .steps li {
+      margin-bottom: 8px;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .footer-text {
+      color: #999;
+      font-size: 12px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+    }
+    .icon {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Genesis Migrado a React</h1>
+    <p class="subtitle">Proyecto listo para desarrollo</p>
+
+    <div class="status">
+      <div class="status-item">
+        <span class="check">✓</span>
+        <span>Node.js 22.14.0 instalado</span>
+      </div>
+      <div class="status-item">
+        <span class="check">✓</span>
+        <span>Vite + React 18.3.1 configurado</span>
+      </div>
+      <div class="status-item">
+        <span class="check">✓</span>
+        <span>4 Componentes implementados (Header, Hero, Services, Footer)</span>
+      </div>
+      <div class="status-item">
+        <span class="check">✓</span>
+        <span>Assets copiados a public/</span>
+      </div>
+      <div class="status-item">
+        <span class="check">✓</span>
+        <span>Proxy a send_form.php configurado</span>
+      </div>
+      <div class="status-item">
+        <span class="check">✓</span>
+        <span>Build de producción compilado</span>
+      </div>
+    </div>
+
+    <div class="steps">
+      <h3>🚀 Para Iniciar (Elige una opción):</h3>
+      <ol>
+        <li><strong>Script fácil (Windows):</strong> Haz doble clic en <code>dev-server.bat</code></li>
+        <li><strong>Terminal CMD:</strong> <code>cd frontend && npm run dev</code></li>
+        <li><strong>PowerShell:</strong> <code>./dev-server.ps1</code></li>
+      </ol>
+    </div>
+
+    <div class="button-group">
+      <a href="http://localhost:5173" class="btn btn-primary">
+        <span class="icon">🌐</span> Abrir http://localhost:5173
+      </a>
+      <a href="./frontend/" class="btn btn-secondary">
+        <span class="icon">📁</span> Ver Carpeta
+      </a>
+    </div>
+
+    <div class="info-box">
+      <h3>📖 Documentación</h3>
+      <p>
+        <strong>QUICKSTART.md</strong> - Guía de 5 minutos<br>
+        <strong>MIGRATION_GUIDE.md</strong> - Cómo agregar más componentes<br>
+        <strong>SETUP_COMPLETE.md</strong> - Resumen completo del setup
+      </p>
+    </div>
+
+    <div class="info-box">
+      <h3>🔌 Backend Conectado</h3>
+      <p>
+        El formulario de contacto envía datos a <strong>send_form.php</strong> que:
+      </p>
+      <ol style="margin-left: 20px; margin-top: 8px;">
+        <li>Procesa la información</li>
+        <li>Envía email a soportefusionag@gmail.com vía PHPMailer + SMTP</li>
+        <li>Devuelve respuesta a React</li>
+        <li>Muestra modal de confirmación</li>
+      </ol>
+    </div>
+
+    <p class="footer-text">
+      Vite v5.4.21 | React 18.3.1 | Node.js 22.14.0<br>
+      Última actualización: 12 de Enero, 2026
+    </p>
+  </div>
+</body>
+</html>
