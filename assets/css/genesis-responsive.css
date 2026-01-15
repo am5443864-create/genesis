@@ -1,0 +1,91 @@
+/* ===== RESET SEGURO ===== */
+*{ box-sizing:border-box; }
+img, video, iframe{
+  max-width:100%;
+  height:auto;
+  display:block;
+}
+
+/* ===== CONTENEDOR ===== */
+.wrap{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding-inline:20px;
+}
+
+/* ===== FLEX / GRID ===== */
+.flex{ display:flex; gap:20px; }
+.center{ align-items:center; }
+.wrap-flex{ flex-wrap:wrap; }
+
+.grid{ display:grid; gap:20px; }
+.grid-2{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+.grid-3{ grid-template-columns:repeat(3, minmax(0, 1fr)); }
+
+/* ===== BREAKPOINTS ===== */
+@media (max-width:900px){
+  .grid-3{ grid-template-columns:repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width:600px){
+  .grid-2, .grid-3{ grid-template-columns:1fr; }
+  .hide-m{ display:none !important; }
+  .center-m{ text-align:center; }
+}
+
+/* ===== HERO (ajustes para tu estructura) ===== */
+.hero-wrap{
+  position: relative;
+}
+
+.hero-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* globo PNG con forma */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero.wrap{
+  position: relative;
+  z-index: 1; /* por encima del fondo */
+}
+
+.hero-right{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+/* 👇 IMPORTANTE: como hero-grid es GRID, el orden lo manda el HTML.
+   En móvil lo hacemos 1 columna y listo. */
+@media (max-width:600px){
+  .hero-grid{
+    grid-template-columns: 1fr; /* apila todo */
+    gap:14px;
+  }
+
+  /* si tu fondo estorba en móvil */
+  .hero-bg{ object-fit: cover; }
+}
+
+/* ====== FIX RESPONSIVE: SERVIDORES (cards) ======
+   En móvil quitamos min-width y hacemos el texto estático para que no se encime. */
+@media (max-width:700px){
+  .serv-card-inline{
+    min-width: 0 !important;
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+  .serv-text-overlay{
+    position: static !important;
+    width: 100% !important;
+    left: auto !important;
+    top: auto !important;
+    padding: 16px !important;
+    text-align: left !important;
+  }
+}
