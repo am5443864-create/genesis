@@ -1,0 +1,350 @@
+.ubicanos-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 12px 40px;
+  background: transparent;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #111;
+}
+
+.ubicanos-inner {
+  width: 100%;
+  max-width: 1050px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  position: relative;
+}
+
+.ubicanos-title-img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin-top: 8px;
+}
+
+.ubicanos-plane {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  margin-top: -69px;
+}
+
+.plane-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.loc {
+  position: absolute;
+  left: 5%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.loc-pin {
+  width: 44px;
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+  margin-left: 80px;
+}
+
+.loc-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 16px;
+  font-weight: 900;
+  color: #2e76ff;
+  letter-spacing: 0.5px;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-left: 80px;
+}
+
+.loc-cloud {
+  position: absolute;
+  inset: -6px -10px -6px -10px;
+  width: 120%;
+  height: auto;
+  z-index: -1;
+  opacity: 0.95;
+}
+
+.loc-morelos {
+  top: 20%;
+}
+
+.loc-puebla {
+  top: 40%;
+}
+
+.loc-cdmx {
+  top: 60%;
+}
+
+.addr {
+  position: absolute;
+  width: 46%;
+  font-size: 19px;
+  line-height: 1.3;
+  color: #0D2D69;
+  font-weight: 800;
+  text-align: left;
+}
+
+.addr a {
+  text-decoration: none;
+  color: #0D2D69;
+  font-size: 1.2em;
+  font-weight: 700;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.addr a:hover {
+  background: #e8f5e9;
+  transform: scale(1.05);
+}
+
+.addr-morelos {
+  top: 21.5%;
+  left: 51%;
+}
+
+.addr-puebla {
+  top: 40.9%;
+  left: 51%;
+  width: 44%;
+}
+
+.addr-cdmx {
+  top: 60.9%;
+  left: 51%;
+  width: 44%;
+}
+
+.contacto-form {
+  position: absolute;
+  right: 13%;
+  top: 28%;
+  width: 32%;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+}
+
+.contacto-form h3 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 0;
+}
+
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  width: 100%;
+  background: transparent;
+  border: 3px solid #083b7a;
+  border-radius: 6px;
+  padding: 10px 35px;
+  font-size: 14px;
+  outline: none;
+  color: #fff;
+  font-family: inherit;
+}
+
+.contacto-form input::placeholder,
+.contacto-form textarea::placeholder {
+  color: #ffffffcc;
+}
+
+.contacto-form textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+.contacto-form button {
+  width: 100%;
+  background: #fff;
+  color: #0a2a63;
+  border: 0;
+  padding: 16px 10px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
+  margin-top: 6px;
+  transition: transform 0.2s;
+}
+
+.contacto-form button:hover {
+  transform: translateY(-2px);
+}
+
+.genesis-logo {
+  position: absolute;
+  left: 13%;
+  bottom: -1%;
+  width: 78px;
+  height: auto;
+  opacity: 0.98;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.18));
+  z-index: 2;
+}
+
+.genesis-cloud {
+  position: absolute;
+  left: 9.9%;
+  bottom: -2%;
+  width: 150px;
+  height: auto;
+  opacity: 0.98;
+  z-index: 1;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .ubicanos-title-img {
+    max-width: 420px;
+  }
+
+  .ubicanos-plane {
+    margin-top: -32px;
+  }
+
+  .loc {
+    left: 2%;
+  }
+
+  .loc-pin {
+    width: 36px;
+  }
+
+  .loc-label {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .addr {
+    font-size: 12px;
+    width: 56%;
+    left: 42%;
+  }
+
+  .addr-morelos {
+    top: 21%;
+  }
+
+  .addr-puebla {
+    top: 41%;
+  }
+
+  .addr-cdmx {
+    top: 63%;
+  }
+
+  .contacto-form {
+    right: 6%;
+    top: 6%;
+    width: 50%;
+    min-width: 0;
+  }
+
+  .contacto-form h3 {
+    font-size: 18px;
+  }
+
+  .genesis-logo {
+    width: 60px;
+    left: 6%;
+    bottom: 9%;
+  }
+
+  .genesis-cloud {
+    width: 120px;
+    left: 2%;
+    bottom: 2%;
+  }
+}
+
+@media (max-width: 480px) {
+  .ubicanos-title-img {
+    max-width: 340px;
+  }
+
+  .loc-morelos {
+    top: 18%;
+  }
+
+  .loc-puebla {
+    top: 38%;
+  }
+
+  .loc-cdmx {
+    top: 58%;
+  }
+
+  .addr {
+    font-size: 11px;
+    width: 60%;
+    left: 39%;
+  }
+
+  .contacto-form {
+    left: 70%;
+    transform: translateX(-50%);
+    right: auto;
+    top: 10%;
+    width: 38%;
+    gap: 10px;
+  }
+
+  .contacto-form h3 {
+    font-size: 16px;
+  }
+
+  .contacto-form input,
+  .contacto-form textarea {
+    padding: 2px 14px;
+    font-size: 12px;
+  }
+
+  .genesis-logo {
+    width: 44px;
+    left: 14%;
+    bottom: 1%;
+  }
+
+  .genesis-cloud {
+    width: 80px;
+    left: 10%;
+    bottom: 1%;
+  }
+}

@@ -1,0 +1,55 @@
+.nosotros-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -130px;
+  padding-bottom: 60px;
+}
+
+.nosotros {
+  position: relative;
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.nosotros-bg {
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  position: relative;
+  top: 10px;
+}
+
+.nosotros-anim {
+  overflow: visible;
+  opacity: 0;
+  transform: translateY(60px);
+}
+
+.nosotros-anim.in-view {
+  animation: subirDesdeAbajo 1.2s ease-out forwards;
+}
+
+@keyframes subirDesdeAbajo {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .nosotros-bg {
+    top: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nosotros-bg {
+    top: -5px;
+  }
+}

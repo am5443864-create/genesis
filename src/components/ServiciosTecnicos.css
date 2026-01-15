@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+.servtec-section {
+  width: 100%;
+  padding: 40px 0 30px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.servtec-wrap {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+}
+
+.servtec-title {
+  text-align: center;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.servtec-title .t1,
+.servtec-title .t2 {
+  font-family: "Jua", sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 4px !important;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25) !important;
+}
+
+.servtec-title .t1 {
+  font-size: 99px;
+  color: #f39a16;
+}
+
+.servtec-title .t2 {
+  font-size: 44px;
+  letter-spacing: 4px !important;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25) !important;
+  color: #0a2a66;
+  margin-top: -10px;
+  margin-left: 130px;
+}
+
+.servtec-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1300px;
+  flex-wrap: wrap;
+}
+
+.serv-card-inline {
+  position: relative;
+  flex: 1 1 550px;
+  min-width: 450px;
+  max-width: 650px;
+}
+
+.serv-card-inline img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(243, 154, 22, 0.3);
+}
+
+.serv-text-overlay {
+  position: absolute;
+  top: 22%;
+  left: 48%;
+  width: 49%;
+  padding-right: 8px;
+  text-align: left;
+}
+
+.serv-card-inline.card1 .serv-text-overlay {
+  top: 22%;
+}
+
+.serv-card-inline.card2 .serv-text-overlay {
+  top: 15%;
+}
+
+.serv-text-overlay h3 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #0a2a66;
+}
+
+.serv-text-overlay p {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #0a2a66;
+  opacity: 0.95;
+  margin: 0 0 6px 0;
+}
+
+.serv-card-inline.card2 .serv-text-overlay p {
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .servtec-section {
+    padding: 24px 0 40px;
+  }
+
+  .servtec-title .t1 {
+    font-size: 42px;
+  }
+
+  .servtec-title .t2 {
+    font-size: 18px;
+    margin-left: 0;
+    margin-top: -4px;
+  }
+
+  .serv-card-inline {
+    min-width: 300px;
+    max-width: 90%;
+  }
+
+  .serv-text-overlay {
+    top: 50%;
+    left: 43%;
+    width: 55%;
+    font-size: 14px;
+  }
+
+  .serv-text-overlay h3 {
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+
+  .serv-text-overlay p {
+    font-size: 9px;
+    line-height: 1.25;
+  }
+
+  .serv-card-inline.card1 .serv-text-overlay {
+    top: 30%;
+    left: 43%;
+  }
+
+  .serv-card-inline.card2 .serv-text-overlay {
+    top: 38%;
+    left: 43%;
+    width: 52%;
+  }
+
+  .serv-card-inline.card2 .serv-text-overlay h3 {
+    font-size: 14px;
+  }
+
+  .serv-card-inline.card2 .serv-text-overlay p {
+    font-size: 8px;
+    line-height: 1.15;
+  }
+}
+
+@media (max-width: 420px) {
+  .servtec-title .t1 {
+    font-size: 36px;
+  }
+
+  .servtec-title .t2 {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .serv-text-overlay {
+    left: 42%;
+    width: 56%;
+  }
+
+  .serv-card-inline.card2 .serv-text-overlay p {
+    font-size: 7px;
+  }
+}
